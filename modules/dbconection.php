@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = getenv("mendezsolutionsrd_mysqluser");
+$password = getenv("mendezsolutionsrd_mysqlpass");
 $dbname = "proyectofinal";
 
 try {
