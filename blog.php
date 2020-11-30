@@ -1,7 +1,3 @@
-<?php
-    @ require_once('/modules/dbconection.php')
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +14,7 @@
     <div class="blog">
                 <h1 class="big-title">Enterate de las últimas noticias</h1>
                 <?php
+                include './modules/dbconection.php';
                 $sql = "SELECT id, titulo, fecha, imagen, texto FROM noticias ORDER BY fecha LIMIT 3";
                 foreach ($conn->query($sql) as $entry) {
                     $blogId = $entry['id'];

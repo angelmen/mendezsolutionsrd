@@ -1,6 +1,3 @@
-<?php
-    @ require_once('/modules/dbconection.php')
-?>
 
 <!DOCTYPE html>
     <head>
@@ -21,6 +18,7 @@
             <div class="ofertas">
             <h1 class="big-title">Las mejores ofertas actuales</h1>
             <?php
+                include './modules/dbconnection.php';
                 echo "<div class='products-container'>";
                 $sql = "SELECT imagen, nombre, estado, precio FROM productos WHERE stock > 0 LIMIT 4";
                 foreach ($conn->query($sql) as $item) {
