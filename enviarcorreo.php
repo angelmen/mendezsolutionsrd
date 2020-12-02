@@ -30,10 +30,10 @@
     $mail->SMTPSecure = "tls";
     $mail->Port       = 587;
     $mail->Host       = "smtp.gmail.com";
-    $mail->Username   = "mendezsolutionstest01@gmail.com";
-    $mail->Password   = "Cr30Qu33st03sS3gur0";
+    $mail->Username   = getenv("APPMAIL");
+    $mail->Password   = getenv("APPMAILPASS");
     $mail->IsHTML(true);
-    $mail->AddAddress("arismer27@gmail.com");
+    $mail->AddAddress(getenv("APPMAILDEST"));
     $mail->SetFrom($correo, $nombre);
     $mail->Subject = utf8_decode($nombre . " a través del web site del proyecto final");
     $content = utf8_decode($correo . " a través del web site del proyecto final dijo: \n\n" . $mensaje);
