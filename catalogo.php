@@ -19,8 +19,8 @@
                 $sql = "SELECT imagen, nombre, estado, precio FROM productos WHERE stock > 0";
                 foreach ($conn->query($sql) as $item) {
                     $imagen = $item['imagen'];
-                    $nombre = $item['nombre'];
-                    $estado = $item['estado'];
+                    $nombre = utf8_decode($item['nombre']);
+                    $estado = utf8_decode($item['estado']);
                     $precio = number_format ( $item['precio'] , 2 , "." , "," );
                     $wamessage = "Hola!, me interesa saber más sobre el " . $nombre . " que vi en su página web.";
                     ?>
