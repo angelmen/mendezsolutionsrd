@@ -1,17 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "proyectofinal";
-
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +10,8 @@ try {
     <?php @ include("../modules/nav.html") ?>
     <?php @ include("../modules/header.html") ?>
     <?php
-        $sql = "SELECT titulo, fecha, imagen, texto FROM noticias WHERE titulo = " . "'La tecnología y el 2020'";
+        include "../modules/dbconection.php";
+        $sql = "SELECT titulo, fecha, imagen, texto FROM noticias WHERE id = 1";
         foreach ($conn->query($sql) as $entry) {
             $blogTitle = utf8_encode($entry['titulo']);
             $blogDate = utf8_encode($entry['fecha']);
