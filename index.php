@@ -49,10 +49,10 @@
                 $sql = "SELECT id, titulo, fecha, imagen, texto FROM noticias ORDER BY fecha LIMIT 3";
                 foreach ($conn->query($sql) as $entry) {
                     $blogId = $entry['id'];
-                    $blogTitle = utf8_decode($entry['titulo']);
-                    $blogDate = utf8_decode($entry['fecha']);
+                    $blogTitle = utf8_encode($entry['titulo']);
+                    $blogDate = utf8_encode($entry['fecha']);
                     $blogImage = $entry['imagen'];
-                    $texto = utf8_decode($entry['texto']);
+                    $texto = utf8_encode($entry['texto']);
                     $blogResumen = strip_tags($texto);
                     if (strlen($blogResumen) > 500) {
                         $stringCut = substr($blogResumen, 0, 500);

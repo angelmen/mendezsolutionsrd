@@ -26,10 +26,10 @@ try {
     <?php
         $sql = "SELECT titulo, fecha, imagen, texto FROM noticias WHERE titulo = " . "'La tecnología y el 2020'";
         foreach ($conn->query($sql) as $entry) {
-            $blogTitle = $entry['titulo'];
-            $blogDate = $entry['fecha'];
+            $blogTitle = utf8_encode($entry['titulo']);
+            $blogDate = utf8_encode($entry['fecha']);
             $blogImage = $entry['imagen'];
-            $blogResumen = $entry['texto'];
+            $blogResumen = utf8_encode($entry['texto']);
             ?>
             <div class='blog-container'>
                 <div class="blog-imagen">
