@@ -10,5 +10,6 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   global $conn;
 } catch(PDOException $e) {
+  echo $e
 }
 ?>
