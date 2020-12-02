@@ -751,3 +751,7 @@ hr {
 #subscribe-direccion {
     height: 50px;
 }
+
+#contactos-form-enviar:hover {
+    cursor: pointer;
+}

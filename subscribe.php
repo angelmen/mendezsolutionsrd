@@ -15,7 +15,7 @@
             if(isset($_REQUEST["success"])){
                 if($_REQUEST["success"]==true){
                     ?>
-                        <script>alert("Gracias por preferirnos, recibiras nuevas noticias!")</script>
+                        <script>alert("Gracias por preferirnos, recibiras nuevas noticias!");  window.location.href="/subscribe.php";</script>
                     <?php
                 }
             }

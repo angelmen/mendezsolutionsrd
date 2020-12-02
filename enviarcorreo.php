@@ -15,7 +15,7 @@
     }
 
     include "modules/dbconection.php";
-    $sql = "INSERT INTO mensajes (nombre, email, mensaje) VALUES (?,?,?)";
+    $sql = "INSERT INTO mensajes (nombre, email, contenido) VALUES (?,?,?)";
     $conn->prepare($sql)->execute([$nombre, $correo, $mensaje]);
     
     use PHPMailer\PHPMailer\PHPMailer;

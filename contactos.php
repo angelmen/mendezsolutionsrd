@@ -15,11 +15,11 @@
             if(isset($_REQUEST["success"])){
                 if($_REQUEST["success"]==true){
                     ?>
-                        <script>alert("Mensaje enviado")</script>
+                        <script>alert("Mensaje enviado"); window.location.href="/contactos.php";</script>
                     <?php
                 } elseif ($_REQUEST["success"]!=true) {
                     ?>
-                        <script>alert("Mensaje no enviado")</script>
+                        <script>alert("Mensaje no enviado"); window.location.href="/contactos.php";</script>
                     <?php
                 }
             }

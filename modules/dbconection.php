@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "mendezsolutions";
-$password = "Cr30Qu33st03sS3gur0";
+$username = "root";
+$password = "";
 $dbname = "proyectofinal";
 
 try {
@@ -10,6 +10,5 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   global $conn;
 } catch(PDOException $e) {
-  echo $e
 }
 ?>
