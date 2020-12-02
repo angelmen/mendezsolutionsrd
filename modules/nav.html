@@ -1,17 +1,30 @@
 <div class="nav-body">
-        <nav class="nav-container">
-            <div id="nav-logo">
-                <a href="/">
-                    <img src="../img/logo.svg">
-                </a>
-            </div>
+    <nav class="nav-container">
+        <div id="nav-logo">
+            <a href="/">
+                <img src="../img/logo.svg">
+            </a>
+        </div>
+        <img class="nav-menu-icon" src="../img/menu-icon.svg" alt="">
+        <ul class="nav-list">
+            <li id="nav-li-inicio"><a href="/">Inicio</a></li>
+            <li id="nav-li-blog"><a href="/blog.php">Blog</a></li>
+            <li id="nav-li-catalogo"><a href="/catalogo.php">Catálogo</a></li>
+            <li id="nav-li-nosotros"><a href="/nosotros.php">Nosotros</a></li>
+            <li id="nav-li-contactos"><a href="/contactos.php">Contactos</a></li>
+            <li class="subscribe-button" id="nav-li-subscribe"><a href="/subscribe.php">Subscribirse</a></li>
+        </ul>
+    </nav>
+</div>
 
-            <ul class="nav-list">
-                <li id="nav-li-inicio"><a href="/">Inicio</a></li>
-                <li id="nav-li-blog"><a href="/blog.php">Blog</a></li>
-                <li id="nav-li-catalogo"><a href="/catalogo.php">Catálogo</a></li>
-                <li id="nav-li-nosotros"><a href="/nosotros.php">Nosotros</a></li>
-                <li id="nav-li-contactos"><a href="/contactos.php">Contactos</a></li>
-            </ul>
-        </nav>
-    </div>
+<div id="nav-side-menu" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Inicio</a>
+    <a href="/blog.php">Blog</a>
+    <a href="/catalogo.php">Catálogo</a>
+    <a href="/nosotros.php">Nosotros</a>
+    <a href="/contactos.php">Contactos</a>
+    <a href="/subscribe.php">Subscribirse</a>
+</div>
+
+<script src="../js/handle-nav.js"></script>

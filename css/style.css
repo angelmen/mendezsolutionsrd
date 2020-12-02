@@ -6,6 +6,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+label {
+    color: black;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.nav-menu-icon:hover {
+    cursor: pointer;
+}
+
+
+
 #nav-logo{
     height: 80px;
     width: 175px;
@@ -34,6 +46,12 @@
     display: flex;
     width: 80%;
     margin: auto;
+    max-width: 1200px;
+}
+
+.nav-menu-icon {
+    display: none;
+    width: 40px;
 }
 
 .nav-list {
@@ -55,12 +73,12 @@
     font-weight: 700;
 }
 
-.login-button{
+.subscribe-button{
     background-color: #DF5A4F;
     border-radius: 10px;
     width: 175px;
 }
-.login-button a{    
+.subscribe-button a{    
     color: #fff;
     text-align: center;
     margin: auto;
@@ -95,8 +113,8 @@
 .container {
     display: block;
     margin: auto;
-    width: 60%;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 900px;
 }
 
 .big-title {
@@ -198,25 +216,31 @@
     z-index: 998;
     background-color: #fff;
     margin-top: 100px;
-    box-shadow: 0px 10px 16px black;
+    box-shadow: 0px -5px 15px -5px #00000030;
 }
 
 .footer-upper{
     display: flex;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .footer-upper div {
+    width: fit-content;
     margin: auto;
 }
 
 .footer-below {
     text-align: center;
     padding-top: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
 }
 
 .footer-logo{
     height: 80px;
-    width: 175px;
+    width: fit-content;
     margin: auto;
 }
 
@@ -248,6 +272,14 @@
     .nav-list, .footer-list{
         display: none;
     }
+    .nav-menu-icon {
+        position: absolute;
+        display: block;
+        width: 40px;
+        top: 35%;
+        right: 10%;
+    }
+
     .container {
         width: 85%;
     }
@@ -262,6 +294,11 @@
     .products-item {
         margin: 5px;
     }
+    .footer-upper {
+        display: block;
+        width: fit-content;
+        margin: 10px auto 10px auto;
+    }
 }
 
 
@@ -273,16 +310,17 @@
         width: 80%;
     }
     .products-container {
-        display: inline-block;
+        display: grid;
         padding: unset;
+        width: fit-content;
+        margin: auto;
     }
     .products-item {
         width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 10px;
-        height: 325px;
-        margin: 6%;
+        height: 350px;
     }
     .blog-resumen-container{
         display: block;
@@ -343,10 +381,6 @@
 .blog-container {
     padding: 20px;
     margin: 50px;
-}
-
-.blog-container .blog-imagen,.blog-resumen {
-    width: 50%;
 }
 
 .nosotros-descripcion {
@@ -460,6 +494,7 @@
     margin: 0 auto 0 auto;
 }
 
+
 .contactos-form {
     display: grid;
 }
@@ -473,4 +508,246 @@
     color: #fff;
     border-style: solid;
     border: none;
+}
+.subscribe-container {
+    width: 90%;
+    margin: auto;
+}
+
+.subscribe-title h1{
+    color: #000;
+    font-style: italic;
+}
+
+.subscribe-form {
+    display: block;
+    width: 70%;
+    margin: 50px auto 0 auto;
+}
+
+.subscribe-form-upper {
+    display: flex;
+    height: 75px;
+}
+
+.subscribe-form-nombre {
+    display: grid;
+    width: 45%;
+    height: 100%;
+    margin: 10px auto 0 0;
+}
+
+.subscribe-form-apellido {
+    display: grid;
+    width: 45%;
+    height: 100%;
+    margin: 10px 0 0 auto;
+}
+
+.subscribe-form-below {
+    width: 100%;
+    height: 75px;
+    margin-top: 30px;
+}
+
+.subscribe-form-correo {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe-form-submit {
+    width: 100%;
+}
+
+.subscribe-form-submit * {
+    display: block;
+    margin: 50px auto;
+    width: 125px;
+    height: 50px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #DF5A4F;
+    color: #fff;
+    background-color: #DF5A4F;
+    font-weight: 700;
+}
+
+input#subscribe-nombre, input#subscribe-apellido, input#subscribe-correo {
+    height: 50px;
+}
+
+.subscribe-title h1 {
+    color: #000;
+    font-style: italic;
+    font-size: 24px;
+    margin: 20px 0 20px 0;
+}
+
+@media screen and (max-width: 680px){
+    .subscribe-form-nombre, .subscribe-form-apellido {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 10px 0 0 0;
+    }
+    .subscribe-form {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .subscribe-form-upper {
+        display: grid;
+        height: 150px;
+    }
+    .subscribe-form-below {
+        height: 75px;
+        width: 100%;
+    }
+
+    .subscribe-form-below {
+        height: 75px;
+        width: 100%;
+    }
+    .subscribe-form-correo {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+    }
+    .subscribe-form-submit * {
+        margin: 20px auto 0 auto;
+        width: 120px;
+        height: 50px;
+        border-radius: 20px;
+    }
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: #DF5A4F;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.contactos-message-form {
+    margin-top: 30px;
+}
+
+hr {
+    color: #000;
+    width: 3px;
+    border-color: #000;
+    background-color: #000;
+}
+.contactos-message-title h1 {
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.contactos-form-input {
+    min-height: 40px;
+    padding: 5px;
+    border-color: #DF5A4F;
+    border-width: 2px;
+    border-style: solid;
+    margin: 10px 0;
+}
+
+#contactos-form-enviar {
+    margin-top: 30px;
+}
+
+.contactos-contactos-title h1 {
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.contactos-contactos-via h2{
+    margin-top: 20px;
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
+}
+.contactos-contactos-via h2{
+    color: #000;
+}
+
+.contactos-contactos-via h3 {
+    color: #000;
+    margin: 30px;
+}
+
+@media screen and (max-width: 680px){
+    #contactos-container{
+        display: grid;
+        margin: auto;
+    }
+    .contactos-message-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .contactos-contactos-container {
+        width: 100%;
+        margin-top: 30px;
+    }
+    hr {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #contactos-container{
+        width: 100%;
+    }
+   
+}
+
+.subscribe-form-below {
+    display: grid;
+    height: unset;
+}
+
+.subscribe-form-correo {
+    margin: 10px 0;
+}
+
+#subscribe-direccion {
+    height: 50px;
 }
