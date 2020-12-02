@@ -58,7 +58,7 @@
                         $stringCut = substr($blogResumen, 0, 500);
                         $endPoint = strrpos($stringCut, ' ');
                         $blogResumen = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                        $blogResumen .= '... <a class="seguir-leyendo" href="/blogs/' . rawurlencode($blogTitle) . '.php">Seguir leyendo</a>';
+                        $blogResumen .= '... <a class="seguir-leyendo" href="/blogs/' . rawurlencode($blogId) . '.php">Seguir leyendo</a>';
                     }
                     ?>
                     <div class='blog-resumen-container'>
